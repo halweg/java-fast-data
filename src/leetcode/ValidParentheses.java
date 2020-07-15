@@ -1,12 +1,12 @@
 package leetcode;
 
-import java.util.Stack;
+import stack.ArrayStack;
 
 //leetcode20,括号匹配问题
 public class ValidParentheses {
 
     public boolean isValid(String s ) {
-        Stack<Character> stack = new Stack<>();
+        ArrayStack<Character> stack = new ArrayStack<>();
 
         for (int i=0; i<s.length(); i++) {
             char c = s.charAt(i);
