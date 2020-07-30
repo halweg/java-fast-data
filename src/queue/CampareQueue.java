@@ -26,7 +26,7 @@ public class CampareQueue {
     }
 
     public static void main(String[] args) {
-        int opcount = 90000;
+        int opcount = 1000000;
 
         ArrayQueue<Integer> arr = new ArrayQueue<>();
 
@@ -36,8 +36,8 @@ public class CampareQueue {
 
         double spendTime2 = queueTest(loop, opcount);
 
-        System.out.println(spendTime);
-        System.out.println(spendTime2);
+        System.out.println("100万次入队出队，普通队列消耗："+ spendTime + "s");
+        System.out.println("100万次入队出队，循环队列消耗："+ spendTime2 + "s");
 
 
     }
