@@ -49,7 +49,6 @@ public class LoopQueue<E> implements Queue<E> {
         tail = (tail + 1) % data.length;
     }
 
-    //出队操作
     private void resize(int newCapacity) {
 
        E[] arr = (E[]) new Object[newCapacity + 1];
@@ -72,7 +71,7 @@ public class LoopQueue<E> implements Queue<E> {
         size--;
         fornt = (fornt + 1) % data.length;
 
-        if (size == getCapacity() / 4 && data.length / 2 != 0) {
+        if (size == getCapacity() / 4 && getCapacity() / 2 != 0) {
             resize(data.length/2);
         }
 
