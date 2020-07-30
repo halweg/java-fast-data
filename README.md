@@ -19,11 +19,11 @@
 
 ```java
 getAuthor(new Person() {
-    public getEmail() {
-        retrun "halweg@163.com";
+    public string getEmail() {
+        retrun "halweg@126.com";
     }
     
-    public getNickName() {
+    public string getNickName() {
         retrun "halweg";
     }
 });
