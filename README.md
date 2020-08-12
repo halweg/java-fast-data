@@ -9,12 +9,16 @@
 * 自动扩容(缩容)的泛型数组(done)
 * 数组队列(done), 数组循环队列(done)
 * 栈(数组栈和链表栈) (done)
-* 链表(done)，跳表，哈希表
-* Binary Search Tree
-* 集合和映射
-* 线段树
-* 并查集
-* AVL
+* 链表(done)
+* Binary Search Tree(前中后序遍历 done)
+* 集合和映射 (coming soon...) 
+* 优先队列和堆 (coming soon...)
+* 线段树 (coming soon...)
+* 并查集 (coming soon...)
+* AVL (coming soon...)
+* 红黑树 (coming soon...)
+* 哈希表 (coming soon...)
+
 
 ## Author
 
