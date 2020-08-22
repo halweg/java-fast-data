@@ -10,10 +10,16 @@ public class BSTDemo {
         for (int i : arr) {
             bst.add(i);
         }
-
-        bst.preOder();
+        //bst.preOd er();
+        //bst.preOrderNR();
         System.out.println();
-        bst.inOrder();
+        //bst.levelOrder();
+        //bst.removeMax();
+        //bst.removeMin();
+        //System.out.println(bst.maxmum());
+        bst.remove(8);
+        bst.preOder();
+        //bst.inOrder();
 
     }
 

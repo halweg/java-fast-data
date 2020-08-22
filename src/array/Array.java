@@ -105,7 +105,7 @@ public class Array<T> {
         data[index] = e;
     }
 
-    //数组中死否含有元素e
+    //数组中是否含有元素e
     public boolean contains(T e) {
         for (int i=0; i < size; i++) {
             if (data[i].equals(e)) {
