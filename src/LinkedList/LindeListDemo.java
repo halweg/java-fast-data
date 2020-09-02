@@ -20,7 +20,8 @@ public class LindeListDemo {
 
         //System.out.println(l.toString());
 
-        l.remove(0);
+        //l.remove(0);
+        l.removeElement(2);
 
         System.out.println(l.toString());
     }
