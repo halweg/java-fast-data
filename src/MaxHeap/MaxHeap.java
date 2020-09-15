@@ -1,5 +1,7 @@
 package MaxHeap;
 
+import java.util.spi.AbstractResourceBundleProvider;
+
 public class MaxHeap<E extends Comparable<E>> {
 
 
@@ -12,6 +14,13 @@ public class MaxHeap<E extends Comparable<E>> {
 
     public MaxHeap () {
         data = new Array<E>();
+    }
+
+    public MaxHeap(E[] arr) {
+        data = new Array<E>(arr);
+        for (int i= parent(data.getSize() - 1); i >= 0; i--) {
+            siftDown(i);
+        }
     }
 
     public int getSize() {
@@ -72,27 +81,20 @@ public class MaxHeap<E extends Comparable<E>> {
     }
 
     private void siftDown(int k) {
-
-        //k节点若有子节点，子节点最小的key应该为 leftChild（K）
-        //k的子节点最小的key应该小于data整体的size,此时k的子节点方才存在
+        //k节点若有子节点，子节点最小的key应该为 leftChild（K）,左子节点的index应该不大于data的尺寸
         while (leftChild(k) < data.getSize()) {
-
+            //System.out.println("siftDown while 中。。。。。");
             int j  = leftChild(k);
             if (j + 1 < data.getSize() &&
                     data.get(j+1).compareTo(data.get(j)) > 0 ) {
                 j = rightChild(k);
                 //此时 data[j] 是rightChild 和 leftChild 中的最大值
-
-                if (data.get(k).compareTo(data.get(j)) > 0) {
-                    break;
-                }
-
-                data.swap(k, j);
-
-                k = j;
-
             }
-
+            if (data.get(k).compareTo(data.get(j)) >= 0) {
+                break;
+            }
+            data.swap(k, j);
+            k = j;
         }
     }
 
